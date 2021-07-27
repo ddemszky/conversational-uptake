@@ -1,4 +1,4 @@
-obs_id,exchange_idx,student_text,teacher_text,student_on_task,student_on_task_num_agree,student_on_task_majority,student_on_task_zscore,teacher_on_task,teacher_on_task_num_agree,teacher_on_task_majority,teacher_on_task_zscore,active_listening,active_listening_num_agree,active_listening_majority,active_listening_zscore
+obs_id,exchange_idx,student_text,teacher_text,student_on_task,student_on_task_num_agree,student_on_task_majority,student_on_task_zscore,teacher_on_task,teacher_on_task_num_agree,teacher_on_task_majority,teacher_on_task_zscore,uptake,uptake_num_agree,uptake_majority,uptake_zscore
 4,65,And then when I was doing the problems –,Yeah.,0.6666666666666666,2,1,-0.2947476917592531,0.6666666666666666,2,1,-0.3364878571559044,0.0,2,0.0,-1.7397477310660059
 4,296,I’m having trouble with these two.,To solve them?,1.0,3,1,0.4191447961728436,1.0,3,1,0.3996730192756881,0.6666666666666666,2,1.0,-0.8144447906058684
 7,69,"They are different, the denominator are different.",Different or what word did I use?,1.0,3,1,0.410270151697073,1.0,3,1,0.4055742499032178,1.6666666666666667,2,2.0,0.4775706177693373
