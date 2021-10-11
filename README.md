@@ -14,7 +14,7 @@ Demszky, D., Liu, J., Mancenido, Z., Cohen, J., Hill, H., Jurafsky, D., & Hashim
 
 ## Annotated Uptake Dataset
 
-The annotated dataset contains a sample of **2246 exchanges** extracted from a dataset of 4-5th grade US elementary math classroom transcripts collected by the [National Center for Teacher Effectiveness (NCTE)](https://cepr.harvard.edu/ncte) in New England schools between 2010-2013. These exchanges are turns by students (with at least 5 words), followed by teacher turns in a classroom conversation. 
+The annotated dataset contains a sample of **2246 exchanges** extracted from a dataset of anonymized 4-5th grade US elementary math classroom transcripts collected by the [National Center for Teacher Effectiveness (NCTE)](https://cepr.harvard.edu/ncte) in New England schools between 2010-2013. These exchanges are turns by students (with at least 5 words), followed by teacher turns in a classroom conversation. 
 
 The exchanges are annotated by thirteen experts in math instruction (former and current math teachers and trained raters for classroom observation protocols). The coding instrument can be viewed [here](https://docs.google.com/document/d/1UGAXW3H-bV1m0PWcDM7aGcRgkdrY-fovcPstB4YphvA/edit?usp=sharing).
 
