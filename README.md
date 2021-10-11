@@ -46,6 +46,21 @@ The file includes the following columns:
 
 Each example can be **uniquely identified with the combination of the `obs_id` and `exchange_idx` columns**.
 
-## Code & Model
+## Pre-Trained Model
 
-Under construction
+Please email Dora (ddemszky@stanford.edu) to request the pre-trained uptake model (~880MB). In your email, please include your name, affiliation, short project description (1-2 sentences), list of names on your research team who will be working with the checkpoint, and the following:
+
+```
+I am requesting this checkpoint for my own research and it will be only used by me and my research team. My research team agrees to the following restrictions by requesting this model:
+1. We will not use this model for commercial purposes.
+2. We will not attempt to recover any of the training / fine-tuning data from the model.
+3. We will not share or distribute this model in any way with outside of the research team and the project indicated in this email.
+```
+
+## Running inference
+
+Please follow the following steps to run inference with the pre-trained model:
+1. Install requirements `$ pip install -r requirements.txt`. Currently the Pytorch version is for a CPU, so if you're running this on a GPU, you'll probably want to update the Pytorch (and maybe transformer) installation so that it works on a GPU.
+2. Download and unzip the model checkpoint -- see above.
+3. Put all your data into a single csv file. There should be a column indicating the utterance from speaker A and the utterance from speaker B, and the model will predict to what extent speaker B's utterance takes up speaker A's utterance. See the `data/uptake_annotations.csv` file for an example, where speaker A = `student_text` and speaker B = `teacher_text`.
+4. You can inference like this: `$ python run_inference.py --data_file data/uptake_data.csv --speakerA student_text --speakerB teacher_text --output_col uptake_predictions --output predictions/uptake_data_predictions.csv`
