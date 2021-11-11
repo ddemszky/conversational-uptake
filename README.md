@@ -64,3 +64,6 @@ Please follow the following steps to run inference with the pre-trained model:
 2. Download and unzip the model checkpoint -- see above.
 3. Put all your data into a single csv file. There should be a column indicating the utterance from speaker A and the utterance from speaker B, and the model will predict to what extent speaker B's utterance takes up speaker A's utterance. See the `data/uptake_annotations.csv` file for an example, where speaker A = `student_text` and speaker B = `teacher_text`.
 4. You can inference like this: `$ python run_inference.py --data_file data/uptake_data.csv --speakerA student_text --speakerB teacher_text --output_col uptake_predictions --output predictions/uptake_data_predictions.csv`
+
+**Notes**
+* Make sure there are no empty string or NaNs in your data.
