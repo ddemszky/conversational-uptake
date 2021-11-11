@@ -26,6 +26,8 @@ replace = re.compile('[%s]' % re.escape(punctuation))
 
 
 def get_num_words(text):
+    if not isinstance(text, str):
+        print("%s is not a string" % text)
     text = replace.sub(' ', text)
     text = re.sub(r'\s+', ' ', text)
     text = text.strip()
@@ -88,6 +90,11 @@ def main():
     uptake_model.to(device)
 
     utterances = pd.read_csv(args.data_file)
+    print("EXAMPLES")
+    for i, row in utterances.head().iterrows():
+        print("speaker A: %s" % row[args.speakerA])
+        print("speaker B: %s" % row[args.speakerB])
+        print("----")
 
     print("Running inference on %d examples..." % len(utterances))
     uptake_model.eval()
