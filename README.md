@@ -67,4 +67,4 @@ Please follow the following steps to run inference with the pre-trained model:
 
 **Notes**
 * Make sure there are no empty string or NaNs in your data.
-* The uptake model will only predict scores for utterance pairs where the first utterance is at least *5 tokens* long.
+* The uptake model will only predict scores for utterance pairs where the first utterance is at least *5 tokens* long, ignoring punctuation.
