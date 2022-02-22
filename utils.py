@@ -1,5 +1,5 @@
 import torch
-from transformers.modeling_bert import BertModel, BertPreTrainedModel
+from transformers.models.bert.modeling_bert import BertModel, BertPreTrainedModel
 from torch import nn
 from itertools import chain
 from torch.nn import MSELoss, CrossEntropyLoss
