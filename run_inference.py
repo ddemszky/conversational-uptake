@@ -79,6 +79,7 @@ def main():
     parser.add_argument("--output", type=str, default="",
                         help="Filename for storing predictions.")
     parser.add_argument("--max_length", type=int, default=120, help="Maximum input sequence length")
+    parser.add_argument("--student_min_words", type=int, default=5, help="Maximum input sequence length")
     args = parser.parse_args()
 
 
@@ -102,7 +103,7 @@ def main():
     with torch.no_grad():
         for i, utt in utterances.iterrows():
             prev_num_words = get_num_words(utt[args.speakerA])
-            if prev_num_words < 5:
+            if prev_num_words < args.student_min_words:
                 uptake_scores.append(None)
                 continue
             uptake_score = get_uptake_score(utterances=utt,
