@@ -62,10 +62,10 @@ I am requesting this checkpoint for my own research and it will be only used by 
 Please follow the following steps to run inference with the pre-trained model:
 1. Create virtual environment: `python3 -m venv venv`
 2. Activate virtual environment: `source venv/bin/activate`
-3. Install requirements `$ pip install -r requirements.txt`. Currently the Pytorch version is for a CPU, so if you're running this on a GPU, you'll probably want to update the Pytorch (and maybe transformer) installation so that it works on a GPU.
+3. Install requirements `$ pip3 install -r requirements.txt`. Currently the Pytorch version is for a CPU, so if you're running this on a GPU, you'll probably want to update the Pytorch (and maybe transformer) installation so that it works on a GPU.
 4. Download and unzip the model checkpoint -- see above.
 5. Put all your data into a single csv file. There should be a column indicating the utterance from speaker A and the utterance from speaker B, and the model will predict to what extent speaker B's utterance takes up speaker A's utterance. See the `data/uptake_annotations.csv` file for an example, where speaker A = `student_text` and speaker B = `teacher_text`.
-6. You can inference like this: `$ python run_inference.py --data_file data/uptake_data.csv --speakerA student_text --speakerB teacher_text --output_col uptake_predictions --output predictions/uptake_data_predictions.csv`
+6. You can inference like this: `$ python3 run_inference.py --data_file data/uptake_data.csv --speakerA student_text --speakerB teacher_text --output_col uptake_predictions --output predictions/uptake_data_predictions.csv`
 
 **Notes**
 * Make sure there are no empty string or NaNs in your data.
