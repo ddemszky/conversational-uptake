@@ -44,8 +44,7 @@ def get_clean_text(text, remove_punct=False):
 def get_prediction(model, instance, device):
     instance["attention_mask"] = [[1] * len(instance["input_ids"])]
     for key in ["input_ids", "token_type_ids", "attention_mask"]:
-        instance[key] = torch.tensor(instance[key]).unsqueeze(0)  # Batch size = 1
-        instance[key].to(device)
+        instance[key] = torch.tensor(instance[key]).unsqueeze(0).to(device)  # Batch size = 1
 
     output = model(input_ids=instance["input_ids"],
                    attention_mask=instance["attention_mask"],
