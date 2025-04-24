@@ -48,14 +48,8 @@ Each example can be **uniquely identified with the combination of the `obs_id` a
 
 ## Pre-Trained Model
 
-Please email Dora (ddemszky@stanford.edu) to request the pre-trained uptake model (~880MB). In your email, please include your name, affiliation, short project description (1-2 sentences), list of names on your research team who will be working with the checkpoint, and the following:
+The uptake model is available on Huggingface for download: https://huggingface.co/stanford-nlpxed/uptake-model
 
-```
-I am requesting this checkpoint for my own research and it will be only used by me and my research team. My research team agrees to the following restrictions by requesting this model:
-1. We will not use this model for commercial purposes.
-2. We will not attempt to recover any of the training / fine-tuning data from the model.
-3. We will not share or distribute this model in any way with outside of the research team and the project indicated in this email.
-```
 
 ## Running inference
 
